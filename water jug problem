@@ -1,0 +1,17 @@
+def water_jug():
+    a, b = 0, 0
+    while True:
+        print(f"Jug A: {a}L, Jug B: {b}L")
+        if a == 2 or b == 2:
+            print("Target achieved!")
+            break
+        if a == 0:
+            a = 4  # Fill jug A
+        elif b != 3:
+            transfer = min(a, 3 - b)
+            a -= transfer
+            b += transfer
+        else:
+            b = 0  # Empty jug B
+
+water_jug()
