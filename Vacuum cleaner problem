@@ -1,0 +1,19 @@
+# Initial room status
+room = {'A': 'Dirty', 'B': 'Dirty'}
+vacuum = 'A'  # Starting position
+
+# Clean current room
+if room[vacuum] == 'Dirty':
+    print(f"Cleaning room {vacuum}")
+    room[vacuum] = 'Clean'
+
+# Move to next room
+vacuum = 'B' if vacuum == 'A' else 'A'
+
+# Clean next room
+if room[vacuum] == 'Dirty':
+    print(f"Cleaning room {vacuum}")
+    room[vacuum] = 'Clean'
+
+# Final result
+print("Final room status:", room)
